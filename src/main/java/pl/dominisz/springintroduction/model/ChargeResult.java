@@ -2,11 +2,11 @@ package pl.dominisz.springintroduction.model;
 
 public class ChargeResult {
     private String message;
-    private boolean successfull;
+    private boolean successful;
 
-    public ChargeResult(String declineMessage, boolean successfull) {
+    public ChargeResult(boolean successful, String declineMessage) {
         this.message = declineMessage;
-        this.successfull = successfull;
+        this.successful = successful;
     }
 
     public String getMessage() {
@@ -14,6 +14,6 @@ public class ChargeResult {
     }
 
     public boolean isSuccessful() {
-        return successfull;
+        return successful;
     }
 }
