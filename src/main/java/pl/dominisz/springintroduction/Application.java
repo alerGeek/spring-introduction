@@ -18,17 +18,7 @@ import java.time.LocalDate;
 @ComponentScan
 public class Application {
 
-//    @Bean
-//    BillingService mockBillingService() {
-//        return new CreditCardBillingService();
-//    }
-
         public static void main(String[] args) {
-//        PaypalCreditCardProcessor paypalCreditCardProcessor = new PaypalCreditCardProcessor();
-//        DatabaseTransactionLog databaseTransactionLog = new DatabaseTransactionLog();
-//
-//        BillingService billingService = new CreditCardBillingService(paypalCreditCardProcessor, databaseTransactionLog);
-
             Order order = new Order();
             OrderItem hotdog = new OrderItem("Hot dog", new BigDecimal("3.59"));
             OrderItem coffee = new OrderItem("Coffee", new BigDecimal("4.99"));
