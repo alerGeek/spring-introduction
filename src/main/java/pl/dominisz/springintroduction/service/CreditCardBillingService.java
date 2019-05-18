@@ -1,13 +1,18 @@
 package pl.dominisz.springintroduction.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import pl.dominisz.springintroduction.exception.UnreachableException;
 import pl.dominisz.springintroduction.model.*;
 
+@Component
 public class CreditCardBillingService implements BillingService {
 
     private final CreditCardProcessor processor;
     private final TransactionLog transactionLog;
 
+    //auto -> opcjonalne
+    @Autowired
     public CreditCardBillingService(CreditCardProcessor processor, TransactionLog transactionLog) {
         this.processor = processor;
         this.transactionLog = transactionLog;

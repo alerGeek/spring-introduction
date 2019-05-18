@@ -1,5 +1,6 @@
 package pl.dominisz.springintroduction.service;
 
+import org.springframework.stereotype.Component;
 import pl.dominisz.springintroduction.exception.UnreachableException;
 import pl.dominisz.springintroduction.model.ChargeResult;
 import pl.dominisz.springintroduction.model.CreditCard;
@@ -7,6 +8,7 @@ import pl.dominisz.springintroduction.model.CreditCard;
 import java.math.BigDecimal;
 import java.util.Random;
 
+@Component
 public class PaypalCreditCardProcessor implements CreditCardProcessor {
 
     private Random random = new Random();
