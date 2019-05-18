@@ -16,6 +16,10 @@ public class Order {
         items.add(orderItem);
     }
 
+    public List<OrderItem> getItems() {
+        return items;
+    }
+
     public BigDecimal getAmount() {
         BigDecimal sum = BigDecimal.ZERO;
         for(OrderItem item : items){

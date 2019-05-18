@@ -17,6 +17,18 @@ public class Receipt {
         this.amount = amount;
     }
 
+    public BigDecimal getAmount() {
+        return amount;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public boolean isSuccesful() {
+        return succesful;
+    }
+
     public static Receipt forSuccessfulCharge(BigDecimal amount) {
         return new Receipt(amount, null, true);
     }
