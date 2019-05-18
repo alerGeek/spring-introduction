@@ -5,9 +5,15 @@ import pl.dominisz.springintroduction.model.*;
 
 public class CreditCardBillingService implements BillingService {
 
+    private final CreditCardProcessor processor;
+    private final TransactionLog transactionLog;
+
+    public CreditCardBillingService(CreditCardProcessor processor, TransactionLog transactionLog) {
+        this.processor = processor;
+        this.transactionLog = transactionLog;
+    }
+
     public Receipt chargeOrder(Order order, CreditCard creditCard) {
-        CreditCardProcessor processor = new PaypalCreditCardProcessor();
-        TransactionLog transactionLog = new DatabaseTransactionLog();
 
         try {
             ChargeResult result = processor.charge(creditCard, order.getAmount());
